@@ -173,7 +173,7 @@ class ELinuxDevice extends Device {
         _forwardedHostPort = observatoryUri!.port;
       }
 
-      return LaunchResult.succeeded(observatoryUri: observatoryUri);
+      return LaunchResult.succeeded(vmServiceUri: observatoryUri);
     }
 
     // Target is desktop hosts from here.
@@ -237,7 +237,7 @@ class ELinuxDevice extends Device {
           updateLaunchJsonFile(FlutterProject.current(), observatoryUri);
         }
 
-        return LaunchResult.succeeded(observatoryUri: observatoryUri);
+        return LaunchResult.succeeded(vmServiceUri: observatoryUri);
       }
       _logger.printError(
         'Error waiting for a debug connection: '
