@@ -292,7 +292,7 @@ class ELinuxDevice extends Device {
   final DevicePortForwarder portForwarder;
 
   @override
-  bool isSupported() => true;
+  Future<bool> isSupported() => Future<bool>.value(true);
 
   @override
   bool get supportsScreenshot => false;
